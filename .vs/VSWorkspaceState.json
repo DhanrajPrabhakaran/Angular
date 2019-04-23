@@ -8,12 +8,9 @@
     "\\src\\app\\contact",
     "\\src\\app\\dishdetail",
     "\\src\\app\\footer",
-    "\\src\\app\\header",
-    "\\src\\app\\home",
-    "\\src\\app\\menu",
-    "\\src\\app\\services",
+    "\\src\\app\\login",
     "\\src\\app\\shared"
   ],
-  "SelectedNode": "\\src\\app\\app-routing\\routes.ts",
+  "SelectedNode": "\\src\\app\\contact\\contact.component.ts",
   "PreviewInSolutionExplorer": false
 }
