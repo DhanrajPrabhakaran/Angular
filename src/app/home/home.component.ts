@@ -5,6 +5,7 @@ import { Promotion } from '../shared/promotion';
 import { PromotionService } from '../services/promotion.service';
 import { Leader } from '../shared/leader';
 import { LeaderService } from '../services/leader.service';
+import { LEADERS } from '../shared/leaders';
 
 @Component({
   selector: 'app-home',
@@ -21,9 +22,13 @@ export class HomeComponent implements OnInit {
     private leaderService: LeaderService) { }
 
   ngOnInit() {
-    this.dish = this.dishService.getFeaturedDish();
-    this.promotion = this.promotionService.getFeaturedPromotion();
-    this.leader = this.leaderService.getFeaturedLeader();
+    this.dishService.getFeaturedDish()
+      .then((dishes) => this.dish = dishes);
+
+    this.promotionService.getFeaturedPromotion()
+      .then((promotion) => this.promotion = promotion);
+    this.leaderService.getFeaturedLeader()
+      .then((leader) => this.leader = leader);
 
   }
 
